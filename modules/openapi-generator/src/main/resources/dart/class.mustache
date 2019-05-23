@@ -58,10 +58,10 @@ class {{classname}} {
     return {
     {{#vars}}
       {{#isDateTime}}
-      '{{baseName}}': {{name}} == null ? '' : {{name}}.toUtc().toIso8601String(){{^-last}},{{/-last}}
+      '{{baseName}}': {{name}} == null ? null : {{name}}.toUtc().toIso8601String(){{^-last}},{{/-last}}
       {{/isDateTime}}
       {{#isDate}}
-      '{{baseName}}': {{name}} == null ? '' : {{name}}.toUtc().toIso8601String(){{^-last}},{{/-last}}
+      '{{baseName}}': {{name}} == null ? null : {{name}}.toUtc().toIso8601String(){{^-last}},{{/-last}}
       {{/isDate}}
       {{^isDateTime}}
       {{^isDate}}
